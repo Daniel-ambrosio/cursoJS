@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pais de onde veio</title>
+</head>
+<body>
+    <h1>Filtrando nacionalidade</h1>
+    Olá, insina aqui qual País você nasceu : <input type="text" name="txtpais" id="txtpais">
+    <input type="button" value="Confirmar" onclick="pais()">
+    <div id="res">
+    </div>
+    <script>
+      
+      function pais(){
+            var país = window.document.getElementById("txtpais")
+            //var país = String(txtpaís.value)
+            var resultado = window.document.querySelector("div#res")
+            resultado.innerHTML = "Verificando...<br/>"
+            //resultado.innerHTML += `Você digitou "${país.value}"..`
+            if(país.value.toUpperCase() == "BRASIL" || país.value.toUpperCase() == "BR"){
+                resultado.innerHTML += `Você é de(a) ${país.value}. Brasileiro!`
+            }else{
+                resultado.innerHTML += `Você é de(a) : ${país.value}. Estrangeiro!` 
+            }
+            
+        }
+    
+    </script>
+    
+</body>
+</html>
